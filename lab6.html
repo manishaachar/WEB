@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6</title>
+</head>
+<body>
+    <input type="text" placeholder= "Enter a String" name="vowels" id="vowels" value=""/>
+    <button onclick="vowels()">Find vowel</button><div id="vowelsres"></div><br /><br /><hr />
+
+    <input type="text" placeholder="Enter a Number" id="numbers" value=""/>
+    <button onclick="revnum()">Reverse Number</button><div id="numberres">
+    <script>
+        function vowels(){
+            var s=document.getElementById("vowels").value;
+            var res=document.getElementById("vowelsres");
+            console.log(s);
+            var vowels=["a","e","i","o","u","A","E","I","O","U"];
+            console.log(vowels.length);
+            for(var i=0;i<s.length;i++){
+                for(var j=0;j<vowels.length;j++){
+                    if(s.charAt(i)===vowels[j]){
+                        i++;
+                        res.innerHTML="Found at " +i;
+                      return;
+                        //console.log("Found at " +i);
+                    }
+                }
+            }
+        }
+
+        function revnum(){
+            var n=document.getElementById("numbers").value;
+            var nres=document.getElementById("numberres");
+            var ntos=n.toString();
+            var rev=ntos.split('').reverse().join('')
+            nres.innerHTML="Reversed number is " +rev;
+        }
+    </script>
+</body>
+</html>

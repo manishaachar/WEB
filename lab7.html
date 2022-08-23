@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab7</title>
+    <script>
+        function add_progress(id) {
+
+            if(document.getElementById(id).checked){
+                document.getElementById("prog_bar").value+=25;
+            }
+            else{
+                document.getElementById("prog_bar").value-=25;
+            }
+        
+            //Checking Wheather the progress bar reached 100%
+            if(document.getElementById("prog_bar").value === 100){
+                    document.getElementById("comp").innerHTML="Completed!!!";
+            }
+            else{
+                    document.getElementById("comp").innerHTML=""
+            }
+        }
+    </script>
+<style>
+    video{
+        width: 500px;
+        padding: 50px;
+    }
+    label{
+        font-weight: bold;
+        color:blue;
+     
+    }
+    h1{
+        color:red;
+        font-family:monospace;
+    }
+</style>
+</head>
+<body>
+          //<video src="/home/mcacnj/Downloads/y2mate.com - How Much Can Your Sharingan See  Naruto Shippuden_480p.mp4" alt="video"  controls></video>//
+        
+		<video src="C:\Users\Manisha\Videos\Captures\Settings 2022-07-31 19-52-18.mp4"  alt="video" controls></video>         
+
+
+            <h1><b>List of Completed Activites</b></h1>
+            <label>Writing the web assignmnets</label>
+            <input id="check1" type="checkbox" onclick="add_progress(id)"/><br/>
+            
+		<label>Watching movie with friends</label>
+            <input id="check2" type="checkbox" onclick="add_progress(id)"/><br/>
+            
+		<label>Washing clothes</label>
+            <input id="check3" type="checkbox" onclick="add_progress(id)" /><br/>
+            
+		<label>Completing Projects</label>     
+            <input id="check4" type="checkbox" onclick="add_progress(id)"/><br/>
+            
+		<progress id="prog_bar" value="0" max="100" style="width:250px"></progress>
+            <div id="comp" style="color:rgb(77, 128, 25)"></div>
+    </body>
+</html>
