@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(function (){
+           $("button").click(function ()
+           {
+            if($(this).text()=='Fade out')
+            {
+                $("div").fadeOut(1000);
+                $(this).text('Fade In');
+            }
+            else
+            {
+                $("div").fadeIn(1000);
+                $(this).text('Fade Out');
+            }
+           }
+           );
+        });
+    </script>
+</head>
+<body>
+    <button>Fade out</button>
+    <div>
+        <p>Indian art consists of a variety of art forms, including painting, sculpture, pottery, and textile arts such as woven silk. Geographically, it spans the entire Indian subcontinent, including what is now India, Pakistan, Bangladesh, Sri Lanka, Nepal, and at times eastern Afghanistan.</p>
+    </div>
+ 
+</body>
+</html>
